@@ -1,0 +1,5 @@
+spacy_streamlit==1.0.6
+st_clickable_images==0.0.3
+streamlit==1.30.0
+spacy>=3.0.0,<4.0.0
+https://github.com/explosion/spacy-models/releases/download/fr_core_news_md-3.7.0/fr_core_news_md-3.7.0.tar.gz

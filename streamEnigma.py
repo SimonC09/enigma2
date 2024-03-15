@@ -224,9 +224,9 @@ custom_css = """
         /* Appliquer une police personnalisée à tout le texte */
         h1 {
             font-family: Ink Free; 
-            color: white;
+            color: black;
             text-align: center;
-            -webkit-text-stroke: 3px black;
+            -webkit-text-stroke: 3px white;
             font-size: 96px;
         }
         .tache {

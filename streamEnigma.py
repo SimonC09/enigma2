@@ -227,14 +227,14 @@ custom_css = """
             font-size: 96px;
         }
         .tache {
-            font-family: "another typewriter"; 
+            font-family: "Tox Typewriter"; 
             color: black;
             text-align: center;
             -webkit-text-stroke: 2px black;
             font-size: 30px;
         }
         .titre2 {
-            font-family: "another typewriter"; 
+            font-family: "Tox Typewriter"; 
             color: black;
             text-align: center;
             -webkit-text-stroke: 2px black;
@@ -243,7 +243,7 @@ custom_css = """
         input[type="text"] {
             background-color: #f1f1f1;
             color: black;
-            font-family: "another typewriter"; 
+            font-family: "Tox Typewriter"; 
             border: 2px solid #ccc;
             border-radius: 4px;
             padding: 8px 12px;

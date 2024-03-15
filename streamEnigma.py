@@ -223,7 +223,7 @@ custom_css = """
 
         /* Appliquer une police personnalisée à tout le texte */
         h1 {
-            font-family: Ink Free; 
+            font-family: "Tox Typewriter"; 
             color: black;
             text-align: center;
             -webkit-text-stroke: 3px white;

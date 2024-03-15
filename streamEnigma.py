@@ -288,7 +288,7 @@ with st.sidebar:
         st.write(clicked)
         st.session_state['Machine'] = dictMachines[clicked]
 
-    st.write("<p class=tache> Ou utiliser THE BOMB ?</p>", unsafe_allow_html=True)
+    st.write("<p class=tache> Ou utiliser la Bombe ?</p>", unsafe_allow_html=True)
 
 ####################################################################
 ##################                                ##################
@@ -327,10 +327,10 @@ if st.session_state['Machine'] == "Enigma":
 ###### UTILISER CHRISTOPHER ######
 
 if st.session_state['Machine'] == "Christopher":
-    st.write("<div class = 'txt'>Veuillez entrer le message à decoder par THE BOMB</div>", unsafe_allow_html=True)
+    st.write("<div class = 'txt'>Veuillez entrer le message à decoder par la Bombe</div>", unsafe_allow_html=True)
     code = st.text_input("code", label_visibility='hidden')
     if code:
         st.image("https://images.squarespace-cdn.com/content/v1/5f998d8e737bec64a3266c55/1604866357473-ZG7HP5S3VDIZV9HV7C3L/Bombe+ON2.gif")
         decode = decodNigma(code)
-        st.write("<div class = 'txt'> voici votre message decodé par THE BOMB : {} </div>".format(decode), unsafe_allow_html=True)
+        st.write("<div class = 'txt'> voici votre message decodé par la Bombe : {} </div>".format(decode), unsafe_allow_html=True)
         decode = ""

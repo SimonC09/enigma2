@@ -221,10 +221,10 @@ custom_css = """
 
         /* Appliquer une police personnalisée à tout le texte */
         h1 {
-            font-family: "Tox Typewriter"; 
-            color: black;
-            text-align: center;            
-
+            font-family: Ink Free; 
+            color: white;
+            text-align: center;
+            -webkit-text-stroke: 3px black;
             font-size: 96px;
         }
         .tache {

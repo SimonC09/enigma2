@@ -296,7 +296,7 @@ with st.sidebar:
 ##################                                ##################
 ####################################################################  
                                
-st.write("<h1><strong>BIENVENUE AU QG DES<br>SERVICES SECRETS</strong></h1>", unsafe_allow_html=True)# Afficher le contenu HTML
+st.write("<h1><strong>BIENVENUE DANS<br>LA HUTTE 8</strong></h1>", unsafe_allow_html=True)# Afficher le contenu HTML
 
 
 

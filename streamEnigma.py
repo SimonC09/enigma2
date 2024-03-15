@@ -174,16 +174,13 @@ def decodNigma(code):
             tokenCode = nlpFr(codeEnigma.lower())
             for token in tokenCode:
                 if token.is_oov:
-                    print(f'dans le if token = {token} posRotor 1 = {posRotor1} posRotor2 = {posRotor2}')
                     decode = False
                     lastLetter = Rotor1.pop()
                     Rotor1.insert(0, lastLetter)
                     posRotor1+=1
                     break
                 else:
-                    print(f'dans le else token = {token}')
                     decode = True
-        print(f'sortie de la boucle while sur le rotor 1')
         lastLetter = Rotor2.pop()
         Rotor2.insert(0, lastLetter)
         posRotor2+=1
@@ -202,16 +199,17 @@ def decodNigma(code):
 
 ############################# LES STYYYYYYYLES (BECAUSE ITS SWAAAAAAAAAAG )#################################
 # Définir le contenu HTML avec l'image en arrière-plan
-url_img = 'https://i.ibb.co/Jc8XyLr/WPbomb.jpg'
+    
 html_code = """
 <style>
     [data-testid="stAppViewContainer"] {
-        background-image: url('https://i.ibb.co/Jc8XyLr/WPbomb.jpg');
+        background-image: url('https://i.ibb.co/b20Tvw8/Design-sans-titre.png');
         background-size: cover;
         background-repeat: no-repeat;
         margin: 0;
         padding: 0;
         height: 100%;
+        background-opacity : 0.75;
     }
 
 </style>
@@ -223,22 +221,22 @@ custom_css = """
 
         /* Appliquer une police personnalisée à tout le texte */
         h1 {
-            font-family: Ink Free; 
-            color: white;
-            text-align: center;
-            -webkit-text-stroke: 3px black;
+            font-family: "Tox Typewriter"; 
+            color: black;
+            text-align: center;            
+
             font-size: 96px;
         }
         .tache {
-            font-family: Impact; 
-            color: white;
+            font-family: "another typewriter"; 
+            color: black;
             text-align: center;
             -webkit-text-stroke: 2px black;
             font-size: 30px;
         }
         .titre2 {
-            font-family: Impact; 
-            color: white;
+            font-family: "another typewriter"; 
+            color: black;
             text-align: center;
             -webkit-text-stroke: 2px black;
             font-size: 42px;
@@ -246,17 +244,16 @@ custom_css = """
         input[type="text"] {
             background-color: #f1f1f1;
             color: black;
-            font-family: Ink Free; 
+            font-family: "another typewriter"; 
             border: 2px solid #ccc;
             border-radius: 4px;
             padding: 8px 12px;
             font-size: 16px;
         }
         .txt{
-            font-family: Impact; 
-            color: white;
+            font-family: atwriter; 
+            color: black;
             text-align: center;
-            -webkit-text-stroke: 2px black;
             font-size: 30px;
         }
     </style>
@@ -300,7 +297,7 @@ with st.sidebar:
 ##################                                ##################
 ####################################################################  
                                
-st.write("<h1><strong>BIENVENUE AU QG DES<br> SERVICES SECRETS</strong></h1>", unsafe_allow_html=True)# Afficher le contenu HTML
+st.write("<h1><strong>BIENVENUE AU QG DES<br>SERVICES SECRETS</strong></h1>", unsafe_allow_html=True)# Afficher le contenu HTML
 
 
 
@@ -311,13 +308,13 @@ st.write("<h1><strong>BIENVENUE AU QG DES<br> SERVICES SECRETS</strong></h1>", u
 ###### UTILISER ENIGMA ######
 if st.session_state['Machine'] == "Enigma":
     st.write("<div class = 'txt'>Veuillez entrer le message pour Enigma</div>", unsafe_allow_html=True)
-    message = st.text_input("", key = "Nigma")
+    message = st.text_input(label= "message", label_visibility='hidden')
     if message:
         st.write("<div class = 'txt'>Entrez la position souhaitée pour le rotor 1 (entre 0 et 25)</div>", unsafe_allow_html=True)
-        posRotor1 = st.text_input("", key ="R1")
+        posRotor1 = st.text_input("R1", label_visibility='hidden')
         if posRotor1:
             st.write("<div class = 'txt'>Entrez la position souhaitée pour le rotor 2 (entre 0 et 25)</div>", unsafe_allow_html=True)
-            posRotor2 = st.text_input("", key ="R2")
+            posRotor2 = st.text_input("R2", label_visibility='hidden')
             if posRotor2:
                 st.write("<div class = 'txt'>enigma va maintenant transformer votre message</div>", unsafe_allow_html=True)
                 code = enigma(message,int(posRotor1),int(posRotor2))
@@ -332,7 +329,7 @@ if st.session_state['Machine'] == "Enigma":
 
 if st.session_state['Machine'] == "Christopher":
     st.write("<div class = 'txt'>Veuillez entrer le message à decoder par THE BOMB</div>", unsafe_allow_html=True)
-    code = st.text_input("", key = "Christopher")
+    code = st.text_input("code", label_visibility='hidden')
     if code:
         st.image("https://images.squarespace-cdn.com/content/v1/5f998d8e737bec64a3266c55/1604866357473-ZG7HP5S3VDIZV9HV7C3L/Bombe+ON2.gif")
         decode = decodNigma(code)
